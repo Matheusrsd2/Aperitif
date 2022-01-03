@@ -28,6 +28,7 @@ namespace Aperitif.Pages.Categorias
             {
                 _context.Categorias.Update(categoria);
                 await _context.SaveChangesAsync();
+                TempData["sucesso"] = "Categoria alterada com sucesso!";
                 return RedirectToPage("Index");
             }
             return Page();

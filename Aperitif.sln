@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aperitif.DataAccess", "Aperitif.DataAccess\Aperitif.DataAccess.csproj", "{F5587BCA-2C0E-42A1-A393-BA611DC22E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aperitif.Models", "Aperitif.Models\Aperitif.Models.csproj", "{27ADF747-322F-48EF-A2C0-41A1B505C051}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{89FCBE11-185E-4D16-8743-B8BA2D373AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89FCBE11-185E-4D16-8743-B8BA2D373AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89FCBE11-185E-4D16-8743-B8BA2D373AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5587BCA-2C0E-42A1-A393-BA611DC22E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5587BCA-2C0E-42A1-A393-BA611DC22E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5587BCA-2C0E-42A1-A393-BA611DC22E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5587BCA-2C0E-42A1-A393-BA611DC22E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27ADF747-322F-48EF-A2C0-41A1B505C051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27ADF747-322F-48EF-A2C0-41A1B505C051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27ADF747-322F-48EF-A2C0-41A1B505C051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27ADF747-322F-48EF-A2C0-41A1B505C051}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

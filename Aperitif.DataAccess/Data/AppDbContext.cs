@@ -1,7 +1,7 @@
 ﻿using Aperitif.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aperitif.Data
+namespace Aperitif.DataAccess.Data
 {
     public class AppDbContext : DbContext
     {

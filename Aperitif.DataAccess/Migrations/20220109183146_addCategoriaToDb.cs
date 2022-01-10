@@ -2,9 +2,9 @@
 
 #nullable disable
 
-namespace Aperitif.Migrations
+namespace Aperitif.DataAccess.Migrations
 {
-    public partial class AddCategoriaToDb : Migration
+    public partial class addCategoriaToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

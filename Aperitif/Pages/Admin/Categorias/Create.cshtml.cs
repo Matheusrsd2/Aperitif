@@ -3,19 +3,18 @@ using Aperitif.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Aperitif.Pages.Categorias
+namespace Aperitif.Pages.Admin.Categorias
 {
-    public class EditModel : PageModel
+    public class CreateModel : PageModel
     {
         public Categoria Categoria { get; set; }
         public readonly AppDbContext _context;
-        public EditModel(AppDbContext context)
+        public CreateModel(AppDbContext context)
         {
             _context = context;
         }
-        public void OnGet(int id)
+        public void OnGet()
         {
-            Categoria = _context.Categorias.Find(id);
         }
 
         public async Task<IActionResult> OnPost(Categoria categoria)
@@ -26,9 +25,9 @@ namespace Aperitif.Pages.Categorias
             }
             if (ModelState.IsValid)
             {
-                _context.Categorias.Update(categoria);
+                await _context.Categorias.AddAsync(categoria);
                 await _context.SaveChangesAsync();
-                TempData["sucesso"] = "Categoria alterada com sucesso!";
+                TempData["sucesso"] = "Categoria criada com sucesso!";
                 return RedirectToPage("Index");
             }
             return Page();

@@ -40,6 +40,23 @@ namespace Aperitif.DataAccess.Migrations
 
                     b.ToTable("Categorias");
                 });
+
+            modelBuilder.Entity("Aperitif.Models.FoodType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FoodTypes");
+                });
 #pragma warning restore 612, 618
         }
     }

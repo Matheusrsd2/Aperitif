@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aperitif.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220109183146_addCategoriaToDb")]
-    partial class addCategoriaToDb
+    [Migration("20220110193530_addFoodTypeToDb")]
+    partial class addFoodTypeToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,6 +41,23 @@ namespace Aperitif.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("Aperitif.Models.FoodType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FoodTypes");
                 });
 #pragma warning restore 612, 618
         }

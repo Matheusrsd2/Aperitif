@@ -11,5 +11,6 @@ namespace Aperitif.DataAccess.Data
         }
         public DbSet<Categoria> Categorias { get; set; }
 
+        public DbSet<FoodType> FoodTypes { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using Aperitif.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Aperitif.Pages.Categorias
+namespace Aperitif.Pages.Admin.Categorias
 {
     public class DeleteModel : PageModel
     {

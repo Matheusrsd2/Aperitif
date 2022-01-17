@@ -4,29 +4,28 @@
 
 namespace Aperitif.DataAccess.Migrations
 {
-    public partial class addCategoriaToDb : Migration
+    public partial class addFoodTypeToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categorias",
+                name: "FoodTypes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DisplayOrder = table.Column<int>(type: "int", nullable: false)
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categorias", x => x.Id);
+                    table.PrimaryKey("PK_FoodTypes", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Categorias");
+                name: "FoodTypes");
         }
     }
 }
